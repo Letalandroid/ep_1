@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void goListar() {
-        Intent it = new Intent();
+        Intent it = new Intent(this, ListCursos.class);
         startActivity(it);
     }
 }

@@ -1,7 +1,9 @@
 package com.ucheve.ep1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +19,8 @@ public class Reporte extends AppCompatActivity {
     EditText txtResult;
     String nombres;
     String curso;
+    Button btnHome;
+    Button btnReturn;
     Double n1;
     Double n2;
     Double n3;
@@ -29,6 +33,8 @@ public class Reporte extends AppCompatActivity {
         setContentView(R.layout.activity_reporte);
 
         txtResult = findViewById(R.id.txtResult);
+        btnHome = findViewById(R.id.btnHome);
+        btnReturn = findViewById(R.id.btnReturn);
         try {
             data = new JSONObject(getIntent().getStringExtra("data"));
             nombres = data.getString("nombre");
@@ -55,6 +61,24 @@ public class Reporte extends AppCompatActivity {
                 getPromedio() >= 10.5 ? "APROBADO" : "DESAPROBADO");
 
         txtResult.setText(result);
+
+        btnHome.setOnClickListener(v -> {
+            goHome();
+        });
+
+        btnReturn.setOnClickListener(v -> {
+            goBack();
+        });
+    }
+
+    private void goHome() {
+        Intent it = new Intent(this, MainActivity.class);
+        startActivity(it);
+    }
+
+    private void goBack() {
+        Intent it = new Intent(this, Registrar.class);
+        startActivity(it);
     }
 
     private float getPromedio() {

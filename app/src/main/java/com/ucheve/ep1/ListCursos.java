@@ -1,24 +1,31 @@
 package com.ucheve.ep1;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class ListCursos extends AppCompatActivity {
+
+    TextView lblCursos;
+    Button btnReturn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_list_cursos);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        lblCursos = findViewById(R.id.lblCursos);
+        lblCursos.setText("Programación Móviles\n" +
+                        "Business Intelligence\n" +
+                        "Investigación Científica\n" +
+                        "Comercio Electrónico\n");
+
+        btnReturn = findViewById(R.id.btnReturn2);
+
+        btnReturn.setOnClickListener(v -> {
+            finish();
         });
     }
 }

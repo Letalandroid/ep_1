@@ -23,8 +23,8 @@
 
     <EditText
         android:id="@+id/txtResult"
-        android:layout_width="313dp"
-        android:layout_height="134dp"
+        android:layout_width="347dp"
+        android:layout_height="245dp"
         android:layout_marginTop="28dp"
         android:ems="10"
         android:gravity="start|top"
@@ -32,4 +32,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="112dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="72dp"
+        android:text="Registrar nuevo"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        tools:layout_editor_absoluteX="67dp" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Inicio"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        tools:layout_editor_absoluteX="268dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
