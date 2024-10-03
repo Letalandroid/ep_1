@@ -37,17 +37,19 @@
         android:id="@+id/btnReturn"
         android:layout_width="112dp"
         android:layout_height="64dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="72dp"
         android:text="Registrar nuevo"
-        app:layout_constraintTop_toBottomOf="@+id/txtResult"
-        tools:layout_editor_absoluteX="67dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
 
     <Button
         android:id="@+id/btnHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
+        android:layout_marginEnd="48dp"
         android:text="Inicio"
-        app:layout_constraintTop_toBottomOf="@+id/txtResult"
-        tools:layout_editor_absoluteX="268dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
 </androidx.constraintlayout.widget.ConstraintLayout>
