@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="datos">
+        <item>Programación Moviles</item>
+        <item>Business Intelligence</item>
+        <item>Investigacion Cientifica</item>
+        <item>Comercio Electronico</item>
+    </string-array>
+</resources>
